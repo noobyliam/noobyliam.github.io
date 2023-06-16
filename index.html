@@ -41,9 +41,20 @@
 		</style>
 	</head>
 	<body>
-		<h1>bagels et beignets</h1>
-		<h2>(bagels 'n' donuts)</h2>
-		<p>Chez bagels et donuts, nous avons les meilleurs pains et viennoiseries pour une collation à tout moment !</p>
+		<div id="home">
+			<h1>bagels et beignets</h1>
+			<h2>(bagels 'n' donuts)</h2>
+			<p>Chez bagels et donuts, nous avons les meilleurs pains et viennoiseries pour une collation à tout moment !</p>
+		</div>
+		<div id="bagel">
+			<p>Bagel nature: $1.49</p>
+			<p>Tout bagel: $1.59</p>
+			<p>Bagel au levain: $1.64</p>
+			<p>Bagel aux myrtilles: $1.59</p>
+			<p>Bagel à la cannelle et aux raisins secs: $1.64</p>
+			<p>Bagel de blé entier: $1.54</p>
+			<p>Sandwich au bagel: $3.99</p>
+		</div>
 		<div id="menu">
 			<h1>Menu</h1>
 			<br>
@@ -63,5 +74,10 @@
 				<h2 id="coffee">Boissons et café</h2>
 			</button>
 		</div>
+		<script>
+			document.getElementById("home").style.display="block";
+			
+			document.getElementById("bagel").style.display="none";
+		</script>
 	</body>
 </html>
