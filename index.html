@@ -55,7 +55,10 @@
 				    position: absolute;
 				    font-size: 1.3em;
 			}
-
+			buy {
+			    left: 25%;
+			    position: absolute;
+			}
 		</style>
 	</head>
 	<body>
@@ -67,6 +70,7 @@
 		</div>
 		<div id="bagel">
 			<p>Bagel nature: $1.49</p>
+			<button id="buy" onclick="buy(1)">E</button>
 			<br>
 			<br>
 			<p>Tout bagel: $1.59</p>
@@ -119,6 +123,9 @@
 				document.getElementById("bagel").style.display="block";
 			
 				document.getElementById("home").style.display="none";
+			}
+			function buy(id){
+				console.log(id);
 			}
 		</script>
 	</body>
