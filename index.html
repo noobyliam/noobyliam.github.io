@@ -30,36 +30,41 @@
 			button {
 				border-radius: 10px;
 				background-color: #84745f;
-				
 				border: none;
 				transition-duration: 0.4s;
 				font-family: 'Rajdhani', sans-serif;
 			}
-			#btn_bagel,#btn_donut,#btn_coffee{
+			#btn_bagel,#btn_donut,#btn_coffee,#btn_cart{
 				width: 70%;
+			}
+			#btn_cart{
+				background-color: #b88867;
 			}
 			button:hover {
 				background-color: #6d5634;
 			}
 			p {
 				left: 32%;
-				
 				font-size:1.6em;
 				position:absolute;
 			}
 			#main{
-				    left: 83%;
-				    top: 3%;
-				    height: 5%;
-				    width: 15%;
-				    position: absolute;
-				    font-size: 1.3em;
+				left: 83%;
+				top: 3%;
+				height: 5%;
+				width: 15%;
+				position: absolute;
+				font-size: 1.3em;
 			}
 			#buy {
 				left: 25%;
 				position: absolute;
 				width: 6%;
 				font-weight: bolder;
+			}
+			button:active{
+			    background-color:#a67f56;
+			    transition-duration:0s;
 			}
 		</style>
 	</head>
@@ -68,7 +73,7 @@
 		<div id="home">
 			<h1>bagels et beignets</h1>
 			<h2>(bagels 'n' donuts)</h2>
-			<p id="p">Chez bagels et donuts, nous avons les meilleurs pains et viennoiseries pour une collation à tout moment !</p>
+			<p id="p">Chez Bagels and Donuts, nous avons les meilleurs pains et pâtisseries que vous pouvez avoir à tout moment !</p>
 		</div>
 		<div id="bagel">
 			<p>Bagel nature: $1.49</p>
@@ -118,6 +123,18 @@
 			<button id="btn_coffee">
 				<h2 id="coffee">Boissons et café</h2>
 			</button>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<button id="btn_cart" onclick="cart()">
+				<h2 id="cart">Vérifier</h2>
+			</button>
 		</div>
 		<script>
 			document.getElementById("home").style.display="block";
@@ -136,6 +153,9 @@
 			}
 			function buy(id){
 				console.log(id);
+			}
+			function cart(){
+				console.log("sdkjndlkfgjnfdk")'
 			}
 		</script>
 	</body>
