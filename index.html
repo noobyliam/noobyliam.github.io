@@ -79,31 +79,65 @@
 		<div id="bagel">
 			<p>Bagel nature: $1.49</p>
 			<br>
-			<button id="buy" onclick="buy(1)">Add to cart</button>
+			<button id="buy" onclick="buy(0)">Add to cart</button>
 			<br>
 			<p>Tout bagel: $1.59</p>
 			<br>
-			<button id="buy" onclick="buy(2)">Add to cart</button>
+			<button id="buy" onclick="buy(1)">Add to cart</button>
 			<br>
 			<p>Bagel au levain: $1.64</p>
 			<br>
-			<button id="buy" onclick="buy(3)">Add to cart</button>
+			<button id="buy" onclick="buy(2)">Add to cart</button>
 			<br>
 			<p>Bagel aux myrtilles: $1.59</p>
 			<br>
-			<button id="buy" onclick="buy(4)">Add to cart</button>
+			<button id="buy" onclick="buy(3)">Add to cart</button>
 			<br>
 			<p>Bagel à la cannelle et aux raisins secs: $1.64</p>
 			<br>
-			<button id="buy" onclick="buy(5)">Add to cart</button>
+			<button id="buy" onclick="buy(4)">Add to cart</button>
 			<br>
 			<p>Bagel de blé entier: $1.54</p>
 			<br>
-			<button id="buy" onclick="buy(6)">Add to cart</button>
+			<button id="buy" onclick="buy(5)">Add to cart</button>
 			<br>
 			<p>Sandwich au bagel: $3.99</p>
 			<br>
+			<button id="buy" onclick="buy(6)">Add to cart</button>
+			<br>
+		</div>
+		<div id="donut">
+			<p>Beignet avec pépites: $1.59</p>
+			<br>
 			<button id="buy" onclick="buy(7)">Add to cart</button>
+			<br>
+			<p>Beignet nature: $1.64</p>
+			<br>
+			<button id="buy" onclick="buy(8)">Add to cart</button>
+			<br>
+			<p>Beignet au chocolat: $1.69</p>
+			<br>
+			<button id="buy" onclick="buy(9)">Add to cart</button>
+			<br>
+			<p>Beignet au miel: $1.64</p>
+			<br>
+			<button id="buy" onclick="buy(10)">Add to cart</button>
+			<br>
+			<p>Beignet au sirop d'érable: $1.74</p>
+			<br>
+			<button id="buy" onclick="buy(11)">Add to cart</button>
+			<br>
+			<p>Beignet à la crème boston: $1.64</p>
+			<br>
+			<button id="buy" onclick="buy(12)">Add to cart</button>
+			<br>
+			<p>Beignet fourré à la confiture: $1.74</p>
+			<br>
+			<button id="buy" onclick="buy(13)">Add to cart</button>
+			<br>
+			<p>Ace est un beignet (spécial harjot): $1.89</p>
+			<br>
+			<button id="buy" onclick="buy(14)">Add to cart</button>
 			<br>
 		</div>
 		<div id="menu">
@@ -116,7 +150,7 @@
 			<br>
 			<br>
 			<button id="btn_donut">
-				<h2 id="donut">Donuts</h2>
+				<h2 id="donut">Beignets</h2>
 			</button>
 			<br>
 			<br>
@@ -139,18 +173,29 @@
 		</div>
 		<script>
 			document.getElementById("home").style.display="block";
-			
 			document.getElementById("bagel").style.display="none";
-			
+			document.getElementById("donut").style.display="none";
+			names_fr=["Bagel nature","Tout bagel","Bagel au levain","Bagel aux myrtilles","Bagel à la cannelle et aux raisins secs","Bagel de blé entier","Sandwich au bagel",
+				  "Beignet avec pépites","Beignet nature","Beignet au chocolat","Beignet au miel","Beignet au sirop d'érable","Beignet à la crème boston","Beignet fourré à la confiture","Ace est un beignet (spécial harjot)"];
+			names_en=["Plain Bagel", "Everything Bagel", "Sourdough Bagel", "Blueberry Bagel", "Cinnamon Raisin Bagel", "Whole Wheat Bagel", "Bagel Sandwich",
+				  "Donut with sprinkles", "Plain donut", "Chocolate donut", "Honey donut", "Maple syrup donut", "Boston cream donut", "Jam filled donut", "Ace is a donut (harjot special)"];
+			price=[1.49,1.59,1.64,1.59,1.64,1.54,3.99,
+			       1.59,1.64,1.69,1.64,1.74,1.64,1.74,1.89];
+			       
 			function home(){
 				document.getElementById("home").style.display="block";
-				
 				document.getElementById("bagel").style.display="none";
+				document.getElementById("donut").style.display="none";
 			}
 			function bagel(){
 				document.getElementById("bagel").style.display="block";
-			
 				document.getElementById("home").style.display="none";
+				document.getElementById("donut").style.display="none";
+			}
+			function donut(){
+				document.getElementById("donut").style.display="block";
+				document.getElementById("home").style.display="none";
+				document.getElementById("bagel").style.display="none";
 			}
 			function buy(id){
 				console.log(id);
