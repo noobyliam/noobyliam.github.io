@@ -201,6 +201,7 @@
 			function buy(id){
 				console.log(id,names_fr[id],names_en[id],price[id]);
 				cart.push(id);
+				document.getElementById("cart").innerHTML="Vérifier ("+cart.length.toString()+")";
 			}
 			function checkout(){
 				console.log("sdkjndlkfgjnfdk");
