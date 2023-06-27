@@ -167,7 +167,7 @@
 			<br>
 			<br>
 			<br>
-			<button id="btn_cart" onclick="cart()">
+			<button id="btn_cart" onclick="checkout()">
 				<h2 id="cart">Vérifier</h2>
 			</button>
 		</div>
@@ -175,6 +175,7 @@
 			document.getElementById("home").style.display="block";
 			document.getElementById("bagel").style.display="none";
 			document.getElementById("donut").style.display="none";
+			cart=[];
 			names_fr=["Bagel nature","Tout bagel","Bagel au levain","Bagel aux myrtilles","Bagel à la cannelle et aux raisins secs","Bagel de blé entier","Sandwich au bagel",
 				  "Beignet avec pépites","Beignet nature","Beignet au chocolat","Beignet au miel","Beignet au sirop d'érable","Beignet à la crème boston","Beignet fourré à la confiture","Ace est un beignet (spécial harjot)"];
 			names_en=["Plain Bagel", "Everything Bagel", "Sourdough Bagel", "Blueberry Bagel", "Cinnamon Raisin Bagel", "Whole Wheat Bagel", "Bagel Sandwich",
@@ -199,8 +200,9 @@
 			}
 			function buy(id){
 				console.log(id,names_fr[id],names_en[id],price[id]);
+				cart.push(id);
 			}
-			function cart(){
+			function checkout(){
 				console.log("sdkjndlkfgjnfdk");
 			}
 		</script>
