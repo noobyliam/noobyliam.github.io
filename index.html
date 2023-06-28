@@ -75,6 +75,7 @@
 			<h1>bagels et beignets</h1>
 			<h2>(bagels 'n' donuts)</h2>
 			<p id="p">Chez Bagels and Donuts, nous avons les meilleurs pains et pâtisseries que vous pouvez avoir à tout moment !</p>
+			<hr>
 		</div>
 		<div id="bagel">
 			<p>Bagel nature: $1.49</p>
@@ -105,6 +106,17 @@
 			<br>
 			<button id="buy" onclick="buy(6)">Add to cart</button>
 			<br>
+			
+			
+			<p>Muffin au chocolat: $2.09</p>
+			<br>
+			<button id="buy" onclick="buy(6846954)">Add to cart</button>
+			<br>
+			<p>Muffin aux myrtilles: $2.14</p>
+			<br>
+			<button id="buy" onclick="buy(6456546)">Add to cart</button>
+			<br>
+
 		</div>
 		<div id="donut">
 			<p>Beignet avec pépites: $1.59</p>
@@ -155,7 +167,7 @@
 			<br>
 			<br>
 			<br>
-			<button id="btn_coffee">
+			<button id="btn_coffee" onclick="coffee()">
 				<h2 id="coffee">Boissons et café</h2>
 			</button>
 			<br>
@@ -175,6 +187,7 @@
 			document.getElementById("home").style.display="block";
 			document.getElementById("bagel").style.display="none";
 			document.getElementById("donut").style.display="none";
+			document.getElementById("coffee").style.display="none";
 			cart=[];
 			names_fr=["Bagel nature","Tout bagel","Bagel au levain","Bagel aux myrtilles","Bagel à la cannelle et aux raisins secs","Bagel de blé entier","Sandwich au bagel",
 				  "Beignet avec pépites","Beignet nature","Beignet au chocolat","Beignet au miel","Beignet au sirop d'érable","Beignet à la crème boston","Beignet fourré à la confiture","Ace est un beignet (spécial harjot)"];
@@ -187,16 +200,25 @@
 				document.getElementById("home").style.display="block";
 				document.getElementById("bagel").style.display="none";
 				document.getElementById("donut").style.display="none";
+				document.getElementById("coffee").style.display="none";
 			}
 			function bagel(){
 				document.getElementById("bagel").style.display="block";
 				document.getElementById("home").style.display="none";
 				document.getElementById("donut").style.display="none";
+				document.getElementById("coffee").style.display="none";
 			}
 			function donut(){
 				document.getElementById("donut").style.display="block";
 				document.getElementById("home").style.display="none";
 				document.getElementById("bagel").style.display="none";
+				document.getElementById("coffee").style.display="none";
+			}
+			function coffee(){
+				document.getElementById("coffee").style.display="block";
+				document.getElementById("home").style.display="none";
+				document.getElementById("bagel").style.display="none";
+				document.getElementById("donut").style.display="none";
 			}
 			function buy(id){
 				console.log(id,names_fr[id],names_en[id],price[id]);
